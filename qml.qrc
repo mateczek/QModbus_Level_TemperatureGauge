@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>background2.jpg</file>
+        <file>ArcItem.qml</file>
+        <file>glass3.png</file>
+        <file>Gauge.qml</file>
+    </qresource>
+</RCC>
