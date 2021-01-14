@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &app, [&](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
-        QObject::connect(&core,&coreProg::updateData,[=](int id, int temperature,int level){
-            obj->setProperty("temperature1",temperature);
+        QObject::connect(&core,&coreProg::updateData,[=](int id, int temperature,int level){  //catch c++ signal and call lambda function
+            obj->setProperty("temperature1",temperature); //qmpl property change -need refactor-
             obj->setProperty("level1",level);
         });
     }, Qt::QueuedConnection);
